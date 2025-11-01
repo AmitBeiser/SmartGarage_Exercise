@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 namespace SmartGarage_Exercise;
-		public class Car : FuelVehicle
+		public class Car : FuelVehicle , IMovable
 		{
 			public Car(string model, int fuel) : base (model, fuel) {}
 			public override void Drive()
@@ -21,11 +21,11 @@ namespace SmartGarage_Exercise;
 			}
 			public override void MoveLeft()
 			{
-				Console.WriteLine($"Car {ModelName} turns left.");
+				Console.WriteLine($"The car {ModelName} turns left.");
 			}
 			public override void MoveRight()
 			{
-				Console.WriteLine($"Car {ModelName} turns right.");
+				Console.WriteLine($"The car {ModelName} turns right.");
 			}
 		}
 

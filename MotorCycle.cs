@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace SmartGarage_Exercise
-{
-	public class Motorcycle : FuelVehicle , IMovable
+public class Motorcycle : FuelVehicle , IMovable
 	{
 		public Motorcycle(string model, int fuel) : base (model, fuel) {}
 		public override void Drive()
@@ -28,5 +21,4 @@ namespace SmartGarage_Exercise
 		{
 			Console.WriteLine($"Motorcycle {ModelName} leans right.");
 		}
-    }
-}
+	}

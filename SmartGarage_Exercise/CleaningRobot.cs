@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace SmartGarage_Exercise
 {
-	public class CleaningRobot
+	public class CleaningRobot : IMovable, IChargeable
 	{
 		public string SerialNumber
 		{
@@ -14,7 +13,7 @@ namespace SmartGarage_Exercise
 		}
 		public int BatteryPercentage
 		{
-			get; private set;
+			get; set;
 		}
 		public CleaningRobot(string serial, int battery)
 		{
@@ -40,11 +39,11 @@ namespace SmartGarage_Exercise
 		}
 		public void MoveLeft()
 		{
-			Console.WriteLine($"Robot {SerialNumber} spins left.");
+			Console.WriteLine($"Robot {SerialNumber} moves left.");
 		}
-		public void MoveRight()
+		public void MoveRight() 
 		{
-			Console.WriteLine($"Robot {SerialNumber} spins right.");
+			Console.WriteLine($"Robot {SerialNumber} moves right.");
 		}
 	}
 }
